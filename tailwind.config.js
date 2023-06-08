@@ -12,6 +12,9 @@ module.exports = {
       colors: {
         'ivory': '#EEEDE7',
       },
+      fontFamily: {
+        cabinetGrotesk: "'Cabinet Grotesk', san-serif",
+      },
     },
   },
   plugins: [],

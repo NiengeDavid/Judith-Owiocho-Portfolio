@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slides-container {
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
+}
+.slides-container::-webkit-scrollbar {
+	display: none; /* Safari and Chrome */
+}
+
+/*For Slide Show 2*/
+.slides-containertwo {
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
+}
+.slides-containertwo::-webkit-scrollbar {
+	display: none; /* Safari and Chrome */
+}
+
+/*For Slide Show 3*/
+.slides-containerthree {
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
+}
+.slides-containerthree::-webkit-scrollbar {
+	display: none; /* Safari and Chrome */
+}

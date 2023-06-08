@@ -8,8 +8,8 @@
         <title>Judith Owoicho</title>
     </head>
     <body class="bg-ivory">
-        <nav class="bg-white w-full h-max items-center text-center shadow-md border border-1 border-opacity-30 border-gray-500 border-x-0 border-t-0">
-            <Div class="flex flex-row-reverse container items-center justify-between md:justify-center">
+        <nav class="fixed top-0 left-0 z-[999] bg-white w-full h-max items-center text-center pt-0 mt-0 shadow-md border border-1 border-opacity-30 border-gray-500 border-x-0 border-t-0">
+            <Div class="flex  flex-row-reverse container items-center justify-between md:justify-center">
                 <div class="flex justify-center items-center space-x-2 p-4 px-6">
                     <!--Nav Heading-->
                     <h1 class="text-gray-900 text-xl font-semibold text-left">
@@ -21,127 +21,234 @@
                     </div>
                 </div>
             
-                <!--Handburger for sm Screens-->
-                <div class="flex w-fit justify-start px-6 items-start md:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!--Handburger Icon for sm Screens-->
+                <div id="menu-btn" class="flex w-fit justify-start px-6 items-start md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </div>
             </Div>
-        </nav>
 
-        <!--Flex Container-->
-        <section class="mt-8 mb-6">
-            <div class="flex justify-center items-start md:space-x-32 md:mx-40">
-                <!--First Column-->
-                <div class="hidden flex-col w-full bg-white my-6 p-3 mx-3 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500 md:flex md:w-1/2">
+            <!--Hamburger Menu-->
+            <div class="hamburger-menu md:hidden top-0 left-0 w-full z-[999] max-h-screen">
+                <div id="menu" class="absolute hidden w-1/5 max-h-screen flex-col items-start bg-white self-start py-2 mt-0 sm:w-auto sm:self-center border shadow-md border-1 border-opacity-30 border-gray-500">
                     <!--Profile pic-->
-                    <div class="w-full h-full p-4 items-center">
+                    <div class="w-40 h-40 p-4 items-center">
                         <img src="images/dp.png" alt="Potrait of Judith" class="w-full h-full rounded-full">
                     </div>
                     <!--Name and Tag-->
                     <div class="flex flex-col w-full items-center space-y-1">
                         <!--Name-->
-                        <h1 class="text-gray-900 font-bold text-4xl text-center">
+                        <h1 class="text-gray-900 font-bold text-sm text-center">
                             Judith Owoicho
                         </h1>
 
                         <!--Tag-->
-                        <h4 class="text-gray-500 font-normal text-sm text-center">
+                        <h4 class="text-gray-500 font-normal text-[9px] text-center">
                             Media & Communication Specialist
                         </h4>
                     </div>
 
                     <!--Buttons-->
-                    <div class="flex flex-col space-y-4 items-start justify-start pt-10 p-3">
+                    <div class="flex flex-col w-full space-y-2 items-start justify-start pt-2 p-3">
                         <!--Home-->
-                        <button class="flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500">
+                        <button data-target="home" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
                             <!--Icon-->
-                            <img src="images/icon.png" alt="Home button" class="w-10 h-10">
+                            <img src="images/icon.png" alt="Home button" class="w-5 h-5">
                             <!--Text-->
-                            <h1 class="text-gray-500 font-normal text-center text-xl">
+                            <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
                                 Home
                             </h1>
                         </button>
 
                         <!--About-->
-                        <button class="flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500">
+                        <button data-target="about" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
                             <!--Icon-->
-                            <img src="images/icon.png" alt="About button" class="w-10 h-10">
+                            <img src="images/icon.png" alt="About button" class="w-5 h-5">
                             <!--Text-->
-                            <h1 class="text-gray-500 font-normal text-center text-xl">
+                            <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
                                 About
                             </h1>
                         </button>
 
                         <!--Blogs-->
-                        <button class="flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500">
+                        <button data-target="blogs" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
                             <!--Icon-->
-                            <img src="images/icon.png" alt="About button" class="w-10 h-10">
+                            <img src="images/icon.png" alt="About button" class="w-5 h-5">
                             <!--Text-->
-                            <h1 class="text-gray-500 font-normal text-center text-xl">
+                            <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
                                 Blogs
                             </h1>
                         </button>
 
                         <!--Skills-->
-                        <button class="flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500">
+                        <button data-target="skills" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
                             <!--Icon-->
-                            <img src="images/icon.png" alt="Skills button" class="w-10 h-10">
+                            <img src="images/icon.png" alt="Skills button" class="w-5 h-5">
                             <!--Text-->
-                            <h1 class="text-gray-500 font-normal text-center text-xl">
+                            <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
                                 Skills
                             </h1>
                         </button>
 
                         <!--Resume-->
-                        <button class="flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500">
+                        <button data-target="resume" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
                             <!--Icon-->
-                            <img src="images/icon.png" alt="Resume button" class="w-10 h-10">
+                            <img src="images/icon.png" alt="Resume button" class="w-5 h-5">
                             <!--Text-->
-                            <h1 class="text-gray-500 font-normal text-center text-xl">
+                            <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
                                 Resume
                             </h1>
                         </button>
 
                         <!--Projects-->
-                        <button class="flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500">
+                        <button data-target="projects" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
                             <!--Icon-->
-                            <img src="images/icon.png" alt="Projects button" class="w-10 h-10">
+                            <img src="images/icon.png" alt="Projects button" class="w-5 h-5">
                             <!--Text-->
-                            <h1 class="text-gray-500 font-normal text-center text-xl">
+                            <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
                                 Projects
                             </h1>
                         </button>
 
                         <!--Contact-->
-                        <button class="flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500">
+                        <button data-target="contact" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
                             <!--Icon-->
-                            <img src="images/icon.png" alt="Contact button" class="w-10 h-10">
+                            <img src="images/icon.png" alt="Contact button" class="w-5 h-5">
                             <!--Text-->
-                            <h1 class="text-gray-500 font-normal text-center text-xl">
+                            <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
                                 Contact
                             </h1>
                         </button>
                     </div>
 
                     <!--Copyright-->
-                    <div class="flex space-x-0 w-full justify-center items-center p-3 pt-8 pb-56">
+                    <div class="flex space-x-0 w-full justify-center items-center p-3 pt-5 pb-56">
                         <!--Since Logo-->
                         <img src="images/icon.png" alt="since logo" class="w-5 h-5">
                         <!--Writeup-->
-                        <h1 class="text-gray-500 text-sm font-normal text-center">
+                        <h1 class="text-gray-500 text-[12px] font-normal text-center">
                             2023 All rights reserved
                         </h1>
                     </div>
                 </div>
+            </div>
+        </nav>
+
+        <!--Flex Container-->
+        <section class="mt-8 mb-6">
+            <div class="flex justify-center items-start md:space-x-56 md:mx-2">
+                <!--First Column-->
+                <div class="w-auto overflow-hidden">
+                    <div class="fixed hidden items-center overflow-hidden max-h-screen flex-col w-auto bg-white my-12 p-3 mx-3 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500 md:flex">
+                        <!--Profile pic-->
+                        <div class="w-40 h-40 p-4 items-center">
+                            <img src="images/dp.png" alt="Potrait of Judith" class="w-full h-full rounded-full">
+                        </div>
+                        <!--Name and Tag-->
+                        <div class="flex flex-col w-full items-center space-y-1">
+                            <!--Name-->
+                            <h1 class="text-gray-900 font-bold text-sm text-center">
+                                Judith Owoicho
+                            </h1>
+    
+                            <!--Tag-->
+                            <h4 class="text-gray-500 font-normal text-[9px] text-center">
+                                Media & Communication Specialist
+                            </h4>
+                        </div>
+    
+                        <!--Buttons-->
+                        <div data-target="home" class="flex flex-col w-full space-y-2 items-start justify-start pt-2 p-3">
+                            <!--Home-->
+                            <button id="home-btn" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
+                                <!--Icon-->
+                                <img src="images/icon.png" alt="Home button" class="w-5 h-5">
+                                <!--Text-->
+                                <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
+                                    Home
+                                </h1>
+                            </button>
+    
+                            <!--About-->
+                            <button data-target="about" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
+                                <!--Icon-->
+                                <img src="images/icon.png" alt="About button" class="w-5 h-5">
+                                <!--Text-->
+                                <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
+                                    About
+                                </h1>
+                            </button>
+    
+                            <!--Blogs-->
+                            <button data-target="blogs" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
+                                <!--Icon-->
+                                <img src="images/icon.png" alt="About button" class="w-5 h-5">
+                                <!--Text-->
+                                <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
+                                    Blogs
+                                </h1>
+                            </button>
+    
+                            <!--Skills-->
+                            <button data-target="skills" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
+                                <!--Icon-->
+                                <img src="images/icon.png" alt="Skills button" class="w-5 h-5">
+                                <!--Text-->
+                                <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
+                                    Skills
+                                </h1>
+                            </button>
+    
+                            <!--Resume-->
+                            <button data-target="resume" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
+                                <!--Icon-->
+                                <img src="images/icon.png" alt="Resume button" class="w-5 h-5">
+                                <!--Text-->
+                                <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
+                                    Resume
+                                </h1>
+                            </button>
+    
+                            <!--Projects-->
+                            <button data-target="projects" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
+                                <!--Icon-->
+                                <img src="images/icon.png" alt="Projects button" class="w-5 h-5">
+                                <!--Text-->
+                                <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
+                                    Projects
+                                </h1>
+                            </button>
+    
+                            <!--Contact-->
+                            <button data-target="contact" class="menu-button flex justify-start space-x-4 bg-none w-full py-2 items-center border border-t-0 border-x-0 border-b-gray-500 hover:border-b-gray-950">
+                                <!--Icon-->
+                                <img src="images/icon.png" alt="Contact button" class="w-5 h-5">
+                                <!--Text-->
+                                <h1 class="text-gray-500 font-normal text-center text-lg hover:text-gray-900">
+                                    Contact
+                                </h1>
+                            </button>
+                        </div>
+    
+                        <!--Copyright-->
+                        <div class="flex space-x-0 w-full justify-center items-center p-3 pt-5 pb-6">
+                            <!--Since Logo-->
+                            <img src="images/icon.png" alt="since logo" class="w-5 h-5">
+                            <!--Writeup-->
+                            <h1 class="text-gray-500 text-[12px] font-normal text-center">
+                                2023 All rights reserved
+                            </h1>
+                        </div>
+                    </div>
+                </div>
 
                 <!--Second Column-->
-                <div class="w-full mx-3">
-                    <div class="flex flex-col w-full bg-white my-6 p-3 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
+                <div id="home" class="flex-col w-full mx-3 my-12 px-3 top-0 md:w-3/5">
+                    <div class="flex flex-col w-full bg-white p-3 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
                         <!--Background pic-->
                         <div class="w-full">
-                            <img src="images/board.jpg" alt="David writing code on a board" class="w-full h-fit rounded-xl">
+                            <img src="images/board.jpg" alt="Judith at work" class="w-full h-fit rounded-xl">
                         </div>
     
                         <!--Portfolio Bottons-->
@@ -169,7 +276,7 @@
                     </div>
 
                     <!--About Paragraph-->
-                    <div class="flex flex-col w-full bg-white my-6 space-y-3 p-5 py-8 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
+                    <div id="about" class="flex flex-col w-full bg-white my-6 space-y-3 p-5 py-8 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
                         <!--Who am I?-->
                         <h1 class="text-gray-900 text-left text-4xl font-bold pb-3">
                             Who am I<a class="bg-gray-900 px-2 rounded-xl text-white">?</a>
@@ -184,7 +291,7 @@
                     </div>
 
                     <!--Blogs-->
-                    <div class="flex flex-col w-full bg-white my-6 space-y-6 px-5 py-8 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
+                    <div id="blogs" class="flex flex-col w-full bg-white my-6 space-y-6 px-5 py-8 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
                         <!--Title-->
                         <h1 class="text-gray-900 text-3xl text-left font-bold md:text-4xl">
                             Blog<a class="bg-gray-900 px-2 pb-1.5 rounded-lg text-white">s</a>
@@ -193,8 +300,9 @@
                         <div class="flex flex-col mx-auto justify-between items-center max-w-full max-h-full space-y-12 space-x-0 p-4 rounded-xl border border-1 border-opacity-30 md:mx-auto md:justify-between md:items-stretch md:space-y-0 md:space-x-6 md:flex-row">
                             <!--Blog 1-->
                             <button class="flex flex-col items-center bg-white rounded-xl justify-between space-y-10 w-full shadow-md">
+                                
                                 <img src="images/board.jpg" alt="Blog Cover" 
-                                    class="rounded-t-xl w-full h-full md:max-h-[240px]" 
+                                    class="rounded-t-xl w-full h-full md:max-h-[240px] hover:text-clip" 
                                 />
             
                                 <h1 class="text-gray-900 text-lg pb-6 rounded-xl font-normal text-center tracking-wide md:text-1xl">
@@ -246,7 +354,7 @@
                     </div>
                     
                     <!--Skills-->
-                    <div class="flex flex-col w-full bg-white my-6 space-y-3 p-5 py-8 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
+                    <div id="skills" class="flex flex-col w-full bg-white my-6 space-y-3 p-5 py-8 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
                        <!--Title-->
                        <h1 class="text-gray-900 text-3xl text-left font-bold md:text-4xl">
                             Skill<a class="bg-gray-900 px-2 pb-1.5 rounded-lg text-white">s</a>
@@ -326,7 +434,7 @@
                     </div>
 
                     <!--Resume-->
-                    <div class="flex flex-col w-full bg-white my-6 space-y-8 p-5 py-8 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
+                    <div id="resume" class="flex flex-col w-full bg-white my-6 space-y-8 p-5 py-8 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
                         <!--Title-->
                         <h1 class="text-gray-900 text-3xl text-left font-bold md:text-4xl">
                             Resum<a class="bg-gray-900 px-2 pb-1.5 rounded-lg text-white">e</a>
@@ -366,7 +474,7 @@
                                             </div>
                                         </div>
                                         <!--Brief-->
-                                        <p class="text-gray-900 text-lsm text-left font-normal w-full p-2">
+                                        <p class="text-gray-900 text-left font-normal w-full p-2">
                                             Built scalable AWS development sandboxes and distributed data stores 
                                             | Solved a critical service-wide auto-scaling infrastructure issue which 
                                             made significant positive impact during peak traffic times.
@@ -400,7 +508,7 @@
                                             </div>
                                         </div>
                                         <!--Brief-->
-                                        <p class="text-gray-900 text-lsm text-left font-normal w-full p-2">
+                                        <p class="text-gray-900 text-left font-normal w-full p-2">
                                             Built scalable AWS development sandboxes and distributed data stores 
                                             | Solved a critical service-wide auto-scaling infrastructure issue which 
                                             made significant positive impact during peak traffic times.
@@ -434,7 +542,7 @@
                                             </div>
                                         </div>
                                         <!--Brief-->
-                                        <p class="text-gray-900 text-lsm text-left font-normal w-full p-2">
+                                        <p class="text-gray-900 text-left font-normal w-full p-2">
                                             Built scalable AWS development sandboxes and distributed data stores 
                                             | Solved a critical service-wide auto-scaling infrastructure issue which 
                                             made significant positive impact during peak traffic times.
@@ -468,7 +576,7 @@
                                             </div>
                                         </div>
                                         <!--Brief-->
-                                        <p class="text-gray-900 text-lsm text-left font-normal w-full p-2">
+                                        <p class="text-gray-900 text-left font-normal w-full p-2">
                                             Built scalable AWS development sandboxes and distributed data stores 
                                             | Solved a critical service-wide auto-scaling infrastructure issue which 
                                             made significant positive impact during peak traffic times.
@@ -509,7 +617,7 @@
                                                 </div>
                                             </div>
                                             <!--Brief-->
-                                            <p class="text-gray-900 text-lsm text-left font-normal w-full p-2">
+                                            <p class="text-gray-900 text-left font-normal w-full p-2">
                                                 GPA: 3.96 | Summa Cum Laude | Dean's List (High Honors) | Helen P.
                                                  Denit Honors Scholor | National Society of Leadership and Success 
                                                  Honor Society Member | Undergraduate Researcher (Turner Research 
@@ -544,7 +652,7 @@
                                                 </div>
                                             </div>
                                             <!--Brief-->
-                                            <p class="text-gray-900 text-lsm text-left font-normal w-full p-2">
+                                            <p class="text-gray-900 text-left font-normal w-full p-2">
                                                 GPA: 3.96 | Summa Cum Laude | Dean's List (High Honors) | Helen P. Denit Honors 
                                                 Scholor | National Society of Leadership and Success Honor Society Member | 
                                                 Undergraduate Researcher (Turner Research Award Recipient) | Featherstone
@@ -579,7 +687,7 @@
                                                 </div>
                                             </div>
                                             <!--Brief-->
-                                            <p class="text-gray-900 text-lsm text-left font-normal w-full p-2">
+                                            <p class="text-gray-900 text-left font-normal w-full p-2">
                                                 GPA: 3.96 | Summa Cum Laude | Dean's List (High Honors) | Helen P. 
                                                 Denit Honors Scholor | National Society of Leadership and Success 
                                                 Honor Society Member | Undergraduate Researcher (Turner Research Award 
@@ -614,7 +722,7 @@
                                                 </div>
                                             </div>
                                             <!--Brief-->
-                                            <p class="text-gray-900 text-lsm text-left font-normal w-full p-2">
+                                            <p class="text-gray-900 text-left font-normal w-full p-2">
                                                 GPA: 3.96 | Summa Cum Laude | Dean's List (High Honors) | Helen P. 
                                                 Denit Honors Scholor | National Society of Leadership and Success 
                                                 Honor Society Member | Undergraduate Researcher (Turner Research Award 
@@ -626,10 +734,338 @@
                             </div>
                         </div>
                     </div>
+
+                    <!--Projects-->
+                    <div id="projects" class="flex flex-col w-full bg-white my-6 space-y-8 p-5 py-8 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
+                        <!--Title-->
+                        <h1 class="text-gray-900 text-3xl text-left font-bold md:text-4xl">
+                            Project<a class="bg-gray-900 px-2 pb-1.5 rounded-lg text-white">s</a>
+                        </h1>
+                        <!--Project 1-->
+                        <div class="flex flex-col space-y-4 p-3 items-center mx-auto w-full rounded-xl border border-1 border-opacity-30 border-gray-500">
+                            <!--Project Title and Descp-->
+                            <div class="flex flex-col space-y-2 items-start w-full">
+                                <!--Title-->
+                                <h1 class="text-gray-900 text-left text-2xl md:text-3xl font-bold">
+                                    Action Against Hunger 2.0
+                                </h1>
+                                <!--Descrp-->
+                                <p class="text-gray-900 text-left font-normal text-sm">
+                                    React Native, React.js, Firebase, SQL
+                                </p>
+                            </div>
+                            <!--Project Details-->
+                            <p class="text-gray-900 text-left font-normal">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas 
+                                vitae scel<span id="dots" class="font-bold text-lg"> ...</span><span id="more" class="hidden">erisque enim ligula 
+                                venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae 
+                                massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, 
+                                sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet 
+                                sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer 
+                                fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor 
+                                porta.</span>
+
+                                <button onclick="myFunction()" id="myBtn" class="font-bold">Read more</button>
+                            </p>
+
+                            <!--Picture proofs-->  
+                            <div id="app" class="w-full px-1 py-2 transition-all duration-500 ease-linear">
+                                <div class="relative">
+                                    <div class="slides-container h-72 flex snap-x snap-mandatory overflow-hidden overflow-x-auto space-x-2 rounded scroll-smooth before:w-[45vw] before:shrink-0 after:w-[45vw] after:shrink-0 md:before:w-0 md:after:w-0">
+                                        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600" alt="mountain_image">
+                                        </div>
+                                        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/6263568/pexels-photo-6263568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/3026364/pexels-photo-3026364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/10343729/pexels-photo-10343729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/13860053/pexels-photo-13860053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/8576739/pexels-photo-8576739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/1743367/pexels-photo-1743367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/5920021/pexels-photo-5920021.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="mountain_image">
+                                        </div>
+                                        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/12805075/pexels-photo-12805075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                        
+                                    </div>
+                        
+                                    <div class="absolute top-0 -left-4 h-full items-center flex">
+                                        <button role="button" class="prev px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group" aria-label="prev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 group-active:-translate-x-2 transition-all duration-200 ease-linear">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                            </svg>
+                        
+                                        </button>
+                                    </div>
+                                    <div class="absolute top-0 -right-4 h-full items-center flex">
+                                        <button role="button" class="next px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group" aria-label="next"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 group-active:translate-x-2 transition-all duration-200 ease-linear">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <!--Project 2-->
+                        <div class="flex flex-col space-y-4 p-3 items-center mx-auto w-full rounded-xl border border-1 border-opacity-30 border-gray-500">
+                            <!--Project Title and Descp-->
+                            <div class="flex flex-col space-y-2 items-start w-full">
+                                <!--Title-->
+                                <h1 class="text-gray-900 text-left text-2xl md:text-3xl font-bold">
+                                    Action Against Hunger 2.0
+                                </h1>
+                                <!--Descrp-->
+                                <p class="text-gray-900 text-left font-normal text-sm">
+                                    React Native, React.js, Firebase, SQL
+                                </p>
+                            </div>
+                            <!--Project Details-->
+                            <p class="text-gray-900 text-left font-normal">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas 
+                                vitae scel<span id="dotstwo" class="font-bold text-lg"> ...</span><span id="moretwo" class="hidden">erisque enim ligula 
+                                venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae 
+                                massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, 
+                                sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet 
+                                sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer 
+                                fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor 
+                                porta.</span>
+
+                                <button onclick="myFunctiontwo()" id="myBtntwo" class="font-bold">Read more</button>
+                            </p>
+
+                            <!--Picture proofs-->  
+                            <div id="app" class="w-full px-1 py-2 transition-all duration-500 ease-linear">
+                                <div class="relative">
+                                    <div class="slides-containertwo h-72 flex snap-x snap-mandatory overflow-hidden overflow-x-auto space-x-2 rounded scroll-smooth before:w-[45vw] before:shrink-0 after:w-[45vw] after:shrink-0 md:before:w-0 md:after:w-0">
+                                        <div class="slidetwo aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600" alt="mountain_image">
+                                        </div>
+                                        <div class="slidetwo aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/6263568/pexels-photo-6263568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidetwo aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/3026364/pexels-photo-3026364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidetwo aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/10343729/pexels-photo-10343729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidetwo aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/13860053/pexels-photo-13860053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidetwo aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/8576739/pexels-photo-8576739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidetwo aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/1743367/pexels-photo-1743367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidetwo aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/5920021/pexels-photo-5920021.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="mountain_image">
+                                        </div>
+                                        <div class="slidetwo aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/12805075/pexels-photo-12805075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidetwo aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                        
+                                    </div>
+                        
+                                    <div class="absolute top-0 -left-4 h-full items-center flex">
+                                        <button role="button" class="prevtwo px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group" aria-label="prev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 group-active:-translate-x-2 transition-all duration-200 ease-linear">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                            </svg>
+                        
+                                        </button>
+                                    </div>
+                                    <div class="absolute top-0 -right-4 h-full items-center flex">
+                                        <button role="button" class="nexttwo px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group" aria-label="next"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 group-active:translate-x-2 transition-all duration-200 ease-linear">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <!--Project 3-->
+                        <div class="flex flex-col space-y-4 p-3 items-center mx-auto w-full rounded-xl border border-1 border-opacity-30 border-gray-500">
+                            <!--Project Title and Descp-->
+                            <div class="flex flex-col space-y-2 items-start w-full">
+                                <!--Title-->
+                                <h1 class="text-gray-900 text-left text-2xl md:text-3xl font-bold">
+                                    Action Against Hunger 2.0
+                                </h1>
+                                <!--Descrp-->
+                                <p class="text-gray-900 text-left font-normal text-sm">
+                                    React Native, React.js, Firebase, SQL
+                                </p>
+                            </div>
+                            <!--Project Details-->
+                            <p class="text-gray-900 text-left font-normal">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas 
+                                vitae scel<span id="dotsthree" class="font-bold text-lg"> ...</span><span id="morethree" class="hidden">erisque enim ligula 
+                                venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae 
+                                massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, 
+                                sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet 
+                                sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer 
+                                fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor 
+                                porta.</span>
+
+                                <button onclick="myFunctionthree()" id="myBtnthree" class="font-bold">Read more</button>
+                            </p>
+
+                            <!--Picture proofs-->  
+                            <div id="app" class="w-full px-1 py-2 transition-all duration-500 ease-linear">
+                                <div class="relative">
+                                    <div class="slides-containerthree h-72 flex snap-x snap-mandatory overflow-hidden overflow-x-auto space-x-2 rounded scroll-smooth before:w-[45vw] before:shrink-0 after:w-[45vw] after:shrink-0 md:before:w-0 md:after:w-0">
+                                        <div class="slidethree aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1600" alt="mountain_image">
+                                        </div>
+                                        <div class="slidethree aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/6263568/pexels-photo-6263568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidethree aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/3026364/pexels-photo-3026364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidethree aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/10343729/pexels-photo-10343729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidethree aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/13860053/pexels-photo-13860053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidethree aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/8576739/pexels-photo-8576739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidethree aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/1743367/pexels-photo-1743367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidethree aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/5920021/pexels-photo-5920021.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="mountain_image">
+                                        </div>
+                                        <div class="slidethree aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/12805075/pexels-photo-12805075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                                        <div class="slidethree aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+                                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountain_image">
+                                        </div>
+                        
+                                    </div>
+                        
+                                    <div class="absolute top-0 -left-4 h-full items-center flex">
+                                        <button role="button" class="prevthree px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group" aria-label="prev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 group-active:-translate-x-2 transition-all duration-200 ease-linear">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                            </svg>
+                        
+                                        </button>
+                                    </div>
+                                    <div class="absolute top-0 -right-4 h-full items-center flex">
+                                        <button role="button" class="nextthree px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group" aria-label="next"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 group-active:translate-x-2 transition-all duration-200 ease-linear">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <!--Get In Touch (Contact)-->
+                    <div id="contact" class="flex flex-col w-full bg-white my-6 space-y-8 p-5 py-8 rounded-xl border shadow-md border-1 border-opacity-30 border-gray-500">
+                        <!--Title-->
+                        <h1 class="text-gray-900 text-3xl text-left font-bold md:text-4xl">
+                            get in touc<a class="bg-gray-900 px-2 pb-1.5 rounded-lg text-white">h</a>
+                        </h1>
+                        <!--Flex Container-->
+                        <div class="flex flex-col p-5 py-8 w-full items-stretch space-y-8 md:space-y-0 md:items-stretch md:flex-row md:justify-between md:space-x-2">
+                            <!--Contact Info-->
+                            <div class="flex flex-col w-full space-y-4 p-5 rounded-xl border border-1 border-opacity-30 border-gray-500">
+                                <!--Title-->
+                                <h1 class="text-gray-900 text-center text-xl font-semibold">
+                                    Contact Info
+                                </h1>
+                                <!--Contact Links-->
+                                <div class="flex flex-col space-y-2 items-start">
+                                    <!--Email-->
+                                    <div class="flex w-full space-x-0.5 items-stretch ">
+                                        <img src="images/icon.png" alt="email logo" class="w-5 h-5">
+                                        <p class="text-sm text-gray-900 text-left font-normal">
+                                            judyowoicho@jowoicho.com
+                                        </p>
+                                    </div>
+                                    <!--LinkedIn-->
+                                    <div class="flex w-full space-x-0.5 items-stretch ">
+                                        <img src="images/icon.png" alt="email logo" class="w-5 h-5">
+                                        <span class="text-sm text-gray-900 text-left font-normal">
+                                            LinkedIn: <a class="cursor-pointer hover:underline text-blue-600" href="#" target="_blank">Judith Owoicho</a>
+                                        </span>
+                                    </div>
+                                    <!--Twitter-->
+                                    <div class="flex w-full space-x-0.5 items-stretch ">
+                                        <img src="images/icon.png" alt="email logo" class="w-5 h-5">
+                                        <span class="text-sm text-gray-900 text-left font-normal">
+                                            Twitter: <a class="cursor-pointer hover:underline text-blue-600" href="https://twitter.com/Judyowoicho" target="_blank">Judith Owoicho</a>
+                                        </span>
+                                    </div>
+                                    <!--WhatsApp-->
+                                    <div class="flex w-full space-x-0.5 items-stretch ">
+                                        <img src="images/icon.png" alt="email logo" class="w-5 h-5">
+                                        <span class="text-sm text-gray-900 text-left font-normal">
+                                            WhatsApp: <a class="cursor-pointer hover:underline text-blue-600" href="#" target="_blank">Judith Owoicho</a>
+                                        </span>
+                                    </div>
+                                    <!--Instagram-->
+                                    <div class="flex w-full space-x-0.5 items-stretch ">
+                                        <img src="images/icon.png" alt="email logo" class="w-5 h-5">
+                                        <span class="text-sm text-gray-900 text-left font-normal">
+                                            Instagram: <a class="cursor-pointer hover:underline text-blue-600" href="#" target="_blank">Judith Owoicho</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Send me a Message-->
+                            <!--Contact Info-->
+                            <div class="flex flex-col space-y-4 p-5 rounded-xl border border-1 border-opacity-30 border-gray-500">
+                                <!--Title-->
+                                <h1 class="text-gray-900 text-center text-xl font-semibold">
+                                    Send me a message
+                                </h1>
+                                <!--Form-->
+                                <form action="#" class="space-y-4">
+                                    <input type="text" name="name" id="" placeholder="Your Name" class="border rounded-lg w-full p-3 hover:border-gray-800">
+                                    <input type="email" name="email" id="" placeholder="Your Email" class="border rounded-lg w-full p-3 hover:border-gray-800">
+                                    <input type="text" name="subject" id="" placeholder="Subject" class="border rounded-lg w-full p-3 hover:border-gray-800">
+                                    <textarea id="message" name="message" placeholder="Your Message" style="height:200px" class="border rounded-lg w-full p-3 hover:border-gray-800"></textarea>
+                                    <button class="rounded-lg bg-gray-900 px-2 text-white w-full h-10 text-xl font-semibold text-center items-center align-middle">
+                                        Send
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <!--Clolumn b close below-->
             </div>
                 
         </section>
+        <script src="index.js"></script>
     </body>
 </html>
