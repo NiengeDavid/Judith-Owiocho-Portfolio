@@ -13,7 +13,7 @@ module.exports = {
         'ivory': '#EEEDE7',
       },
       fontFamily: {
-        cabinetGrotesk: "'Cabinet Grotesk', san-serif",
+        cabinetGrotesk: "'Cabinet Grotesk', 'san-serif'",
       },
     },
   },
